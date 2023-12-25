@@ -8,5 +8,5 @@
 ## Installation
 
 ```
-Install-Package Soenneker.Constants.Auth
+dotnet add package Soenneker.Constants.Auth
 ```
