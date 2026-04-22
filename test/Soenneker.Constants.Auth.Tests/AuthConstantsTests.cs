@@ -1,11 +1,10 @@
 using Soenneker.Tests.Unit;
-using Xunit;
 
 namespace Soenneker.Constants.Auth.Tests;
 
 public class AuthConstantsTests : UnitTest
 {
-    [Fact]
+    [Test]
     public void Default()
     {
 
