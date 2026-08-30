@@ -5,7 +5,7 @@
 
 # Soenneker.Constants.Auth
 
-A set of commonly used constants related to authn/z.
+Provides the conventional `x-api-key` HTTP header name.
 
 ## Install
 
@@ -13,12 +13,14 @@ A set of commonly used constants related to authn/z.
 dotnet add package Soenneker.Constants.Auth
 ```
 
-## What you get
+## Usage
 
-- `AuthConstants` — A set of commonly used constants related to authn/z.
+```csharp
+using Soenneker.Constants.Auth;
 
-## API at a glance
+httpClient.DefaultRequestHeaders.Add(AuthConstants.XApiKey, apiKey);
+```
 
-| API | What it does | Result / important behavior |
-| --- | --- | --- |
-| `AuthConstants.XApiKey` | A commonly used API key header name. | A commonly used API key header name. |
+`AuthConstants.XApiKey` has the literal value `"x-api-key"`. HTTP header names are case-insensitive; the lowercase spelling is provided for consistency across clients, middleware, and tests.
+
+This package only supplies the header name. It does not validate credentials or configure an authentication scheme. Treat the associated header value as a secret and exclude it from logs and telemetry.

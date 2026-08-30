@@ -1,11 +1,11 @@
 ﻿namespace Soenneker.Constants.Auth;
 
 /// <summary>
-/// A set of commonly used constants related to authn/z
+/// Provides names shared by authentication clients and middleware.
 /// </summary>
 public static class AuthConstants
 {
-    /// <summary>A commonly used API key header name</summary>
+    /// <summary>The conventional API-key HTTP header name.</summary>
     /// <value>x-api-key</value>
     public const string XApiKey = "x-api-key";
 }
